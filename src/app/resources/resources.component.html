@@ -1,0 +1,27 @@
+<div class="container">
+
+    <div class="area">
+        <div class="row">
+            <div class="col-lg-12">
+                <h3 class="titie_box"> Richard Branson: An Autobiography </h3>
+                <div class="accordion" id="accordionExample">
+                    <div class="card " *ngFor="let dt of dataView; let i= index">
+                      <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                          <button class="btn btn-link collapsed new_lass" type="button"   data-toggle="collapse" [attr.data-target]="'#collapse' + i" data-target="#i" aria-expanded="false" aria-controls="collapseTwo">
+                            Title {{i+1}} {{dt.title}}
+                          </button>
+                        </h2>
+                      </div>
+                      <div id="collapse{{i}}" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                          {{dt.body}}
+                        </div> 
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+</div>
